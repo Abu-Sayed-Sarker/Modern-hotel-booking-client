@@ -29,7 +29,8 @@ const UpdateRoom = () => {
         fee,
         roomSize,
         description,
-        rating
+        rating,
+        totalreview
     } = room
 
 
@@ -94,10 +95,10 @@ const UpdateRoom = () => {
             hotelAddress: nhotelAddress,
             roomSize: nroomSize,
             description: ndescription,
-            rating
+            rating,
+            totalreview
 
         }
-        console.log(newData)
 
 
         try {

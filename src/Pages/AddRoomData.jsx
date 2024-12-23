@@ -41,6 +41,7 @@ const AddRoomData = () => {
 
         const email = user?.email;
         const name = user?.displayName;
+        const photo = user?.photoURL;
 
 
         // array 
@@ -58,7 +59,7 @@ const AddRoomData = () => {
 
 
         const Data = {
-            owner: { email, name },
+            owner: { email, name, photo },
             hotelName,
             roomPhoto,
             roomStatus,
@@ -69,11 +70,11 @@ const AddRoomData = () => {
             roomSize,
             hotelAddress,
             description,
-            rating: 0
+            rating: 0,
+            totalreview: 0
         }
 
 
-        console.log(Data)
 
         try {
             await mutateAsync(Data)

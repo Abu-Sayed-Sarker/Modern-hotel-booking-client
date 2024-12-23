@@ -53,6 +53,7 @@ const Navbar = () => {
                             <div className="w-10 rounded-full bg-white">
                                 <img
                                     alt="Tailwind CSS Navbar component"
+                                    referrerPolicy='no-referrer'
                                     src={user ? user?.photoURL : img} />
                             </div>
                         </div>
