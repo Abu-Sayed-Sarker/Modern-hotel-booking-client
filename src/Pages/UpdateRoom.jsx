@@ -25,6 +25,7 @@ const UpdateRoom = () => {
         roomTittle,
         facilities,
         paerson,
+        hotelAddress,
         fee,
         roomSize,
         description,
@@ -60,6 +61,7 @@ const UpdateRoom = () => {
         const nroomTittle = form.get("roomTittle") || roomTittle;
         const npaerson = form.get("paerson") || paerson;
         const nfee = form.get("fee") || fee;
+        const nhotelAddress = form.get("hotelAddress") || hotelAddress;
         const ndescription = form.get("description") || description;
         const nroomSize = form.get("roomSize") || roomSize;
 
@@ -89,6 +91,7 @@ const UpdateRoom = () => {
             facilities: newfacilities ? newfacilities : facilities,
             paerson: npaerson,
             fee: nfee,
+            hotelAddress: nhotelAddress,
             roomSize: nroomSize,
             description: ndescription,
             rating
@@ -120,7 +123,7 @@ const UpdateRoom = () => {
         <div>
             <div className="bg-gray-200">
                 <div className="w-10/12 mx-auto">
-                    <h1 className="text-center pt-5 lg:text-5xl text-3xl font-bold text-teal-500">Add new Room</h1>
+                    <h1 className="text-center pt-5 lg:text-5xl text-3xl font-bold text-teal-500">Update your Room data</h1>
                     <form onSubmit={UpdateRoom} className="w-full flex flex-col gap-3 py-10">
                         <div className="flex lg:flex-row flex-col gap-3">
 

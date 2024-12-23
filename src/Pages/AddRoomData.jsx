@@ -33,6 +33,7 @@ const AddRoomData = () => {
         const roomTittle = form.get("roomTittle");
         const paerson = form.get("paerson");
         const fee = form.get("fee");
+        const hotelAddress = form.get("hotelAddress");
         const description = form.get("description");
         const roomSize = form.get("roomSize");
 
@@ -66,6 +67,7 @@ const AddRoomData = () => {
             paerson,
             fee,
             roomSize,
+            hotelAddress,
             description,
             rating: 0
         }

@@ -9,6 +9,7 @@ import AddRoomData from "../Pages/AddRoomData";
 import PrivetRoute from "./PrivetRoute";
 import MyAddedRooms from "../Pages/MyAddedRooms";
 import UpdateRoom from "../Pages/UpdateRoom";
+import RoomDettless from "../Pages/RoomDettless";
 
 
 const Route = createBrowserRouter([
@@ -50,6 +51,10 @@ const Route = createBrowserRouter([
             {
                 path: '/upadate/:id',
                 element: <PrivetRoute><UpdateRoom></UpdateRoom></PrivetRoute>
+            },
+            {
+                path: '/room-dettles/:id',
+                element: <PrivetRoute><RoomDettless></RoomDettless></PrivetRoute>
             },
 
 
