@@ -1,12 +1,30 @@
 import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
+import { useMutation } from "@tanstack/react-query"
+import useAxiosSrc from "../Hooks/useAxiosSrc";
+import toast from "react-hot-toast"
+import { useNavigate } from "react-router-dom";
 
 const AddRoomData = () => {
+    const axiosSrc = useAxiosSrc();
+    const navigate = useNavigate()
+    const { user } = useContext(AuthContext);
 
-    const { user } = useContext(AuthContext)
+    const { mutateAsync, isPending } = useMutation({
+        mutationFn: async rooData => {
+            await axiosSrc.post('/add-rooms', rooData)
+        },
+        onSuccess: () => {
+            console.log("Room Added SuccessFully")
+        },
+        onError: (err) => {
+            console.log(err);
 
-    console.log(user)
-    const addRoom = e => {
+        }
+    });
+
+
+    const addRoom = async e => {
         e.preventDefault()
         const form = new FormData(e.target);
         const roomPhoto = form.get("roomPhoto");
@@ -20,8 +38,8 @@ const AddRoomData = () => {
 
 
 
-        const email = user.email;
-        const name = user.displayName;
+        const email = user?.email;
+        const name = user?.displayName;
 
 
         // array 
@@ -38,10 +56,32 @@ const AddRoomData = () => {
         const facilities = [in1, in2, in3, in4, in5, in6, in7, in8];
 
 
-        const Data = { owner: { email, name }, hotelName, roomPhoto, roomStatus, roomTittle, facilities, paerson, fee, roomSize, description }
+        const Data = {
+            owner: { email, name },
+            hotelName,
+            roomPhoto,
+            roomStatus,
+            roomTittle,
+            facilities,
+            paerson,
+            fee,
+            roomSize,
+            description,
+            rating: 0
+        }
 
 
         console.log(Data)
+
+        try {
+            await mutateAsync(Data)
+            toast.success("Your Room is added successfilly.")
+            e.target.reset()
+            navigate('/myaddedrooms')
+        } catch (err) {
+            console.log(err);
+            toast.error("sothing is wrong")
+        }
     }
     return (
         <div>
@@ -195,7 +235,7 @@ const AddRoomData = () => {
                             </div>
                         </div>
 
-                        <button className="btn w-full bg-teal-200 hover:bg-teal-700 rounded-xl">Add Room</button>
+                        <button className="btn w-full bg-teal-200 hover:bg-teal-700 rounded-xl">{isPending ? "Addeding Room....." : "Add Room"}</button>
 
                     </form>
                 </div>

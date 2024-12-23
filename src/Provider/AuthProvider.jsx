@@ -13,6 +13,8 @@ import {
     updateProfile,
 } from 'firebase/auth'
 
+import axios from "axios";
+
 export const AuthContext = createContext(null);
 
 const auth = getAuth(app)
@@ -22,6 +24,8 @@ const googleSingin = new GoogleAuthProvider()
 
 
 const AuthProvider = ({ children }) => {
+
+
 
 
     const [user, setUser] = useState(null)
@@ -66,12 +70,20 @@ const AuthProvider = ({ children }) => {
 
     //ovserber
 
+    // onAuthStateChange
     useEffect(() => {
-        const unsubscribe = onAuthStateChanged(auth, currentUser => {
+        const unsubscribe = onAuthStateChanged(auth, async currentUser => {
+            if (currentUser?.email) {
+                setUser(currentUser);
+                const { data } = await axios.post(`${import.meta.env.VITE_API_LINK}/jwt`, { email: currentUser?.email }, { withCredentials: true })
+                console.log(data);
 
-            setUser(currentUser);
+            } else {
+                setUser(currentUser);
+                const { data } = await axios.get(`${import.meta.env.VITE_API_LINK}/logout`, { withCredentials: true })
+                console.log(data);
 
-
+            }
             setLoading(false)
         })
         return () => {

@@ -7,6 +7,8 @@ import Login from "../Pages/Authentica/Login";
 import Register from "../Pages/Authentica/Register";
 import AddRoomData from "../Pages/AddRoomData";
 import PrivetRoute from "./PrivetRoute";
+import MyAddedRooms from "../Pages/MyAddedRooms";
+import UpdateRoom from "../Pages/UpdateRoom";
 
 
 const Route = createBrowserRouter([
@@ -40,6 +42,14 @@ const Route = createBrowserRouter([
             {
                 path: '/addroom',
                 element: <PrivetRoute><AddRoomData></AddRoomData></PrivetRoute>
+            },
+            {
+                path: '/myaddedrooms',
+                element: <PrivetRoute><MyAddedRooms></MyAddedRooms></PrivetRoute>
+            },
+            {
+                path: '/upadate/:id',
+                element: <PrivetRoute><UpdateRoom></UpdateRoom></PrivetRoute>
             },
 
 
