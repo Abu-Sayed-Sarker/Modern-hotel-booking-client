@@ -7,7 +7,7 @@ import 'leaflet/dist/leaflet.css';
 
 
 function Map() {
-    const position = [51.505, -0.09]
+    const position = [23.460349861272107, 91.18215446725497]
 
     return (
         <div>

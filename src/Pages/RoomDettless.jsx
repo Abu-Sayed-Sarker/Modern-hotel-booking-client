@@ -74,6 +74,7 @@ const RoomDettless = () => {
             bookingDate: value,
             roomId: _id,
             clinetEmail: user.email,
+            roomDetails: room
         }
         // post Data in data base 
 

@@ -29,7 +29,8 @@ const MyBooking = () => {
     }
 
 
-    const handelDaleteroom = async id => {
+    const handelDaleteroom = async (id, id2) => {
+
         try {
             const { data } = await axios.delete(`${import.meta.env.VITE_API_LINK}/bookin-delet/${id}`)
             const newJob = rooms.filter(r => r._id !== id);
@@ -47,7 +48,7 @@ const MyBooking = () => {
 
 
         try {
-            const { data } = await axios.put(`${import.meta.env.VITE_API_LINK}/updateStatus/${id}`, statusUpadte)
+            const { data } = await axios.put(`${import.meta.env.VITE_API_LINK}/updateStatus/${id2}`, statusUpadte)
             console.log(data);
 
         } catch (err) {

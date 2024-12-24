@@ -19,7 +19,6 @@ const UpdateRoom = () => {
 
     const {
         owner,
-        hotelName,
         roomPhoto,
         roomStatus,
         roomTittle,
@@ -57,7 +56,6 @@ const UpdateRoom = () => {
         e.preventDefault();
         const form = new FormData(e.target);
         const nroomPhoto = form.get("roomPhoto") || roomPhoto;
-        const nhotelName = form.get("hotelName") || hotelName;
         const nroomStatus = form.get("roomStatus") || roomStatus;
         const nroomTittle = form.get("roomTittle") || roomTittle;
         const npaerson = form.get("paerson") || paerson;
@@ -85,7 +83,6 @@ const UpdateRoom = () => {
 
         const newData = {
             owner: owner,
-            hotelName: nhotelName,
             roomPhoto: nroomPhoto,
             roomStatus: nroomStatus,
             roomTittle: nroomTittle,
@@ -137,9 +134,9 @@ const UpdateRoom = () => {
 
                             <label className="form-control w-full">
                                 <div className="label">
-                                    <span className="label-text text-xl">Enter Hotel name</span>
+                                    <span className="label-text text-xl">Room tittle</span>
                                 </div>
-                                <input name="hotelName" type="text" placeholder="Country name here" className="input input-bordered w-full" />
+                                <input name="roomTittle" type="text" placeholder="Enter Room tittle or Headline" className="input input-bordered w-full" />
                             </label>
 
                         </div>
@@ -225,12 +222,7 @@ const UpdateRoom = () => {
                             {/* 2nd option  */}
 
                             <div className="w-full space-y-3">
-                                <label className="form-control w-full">
-                                    <div className="label">
-                                        <span className="label-text text-xl">Room tittle</span>
-                                    </div>
-                                    <input name="roomTittle" type="text" placeholder="Enter Room tittle or Headline" className="input input-bordered w-full" />
-                                </label>
+
                                 <label className="form-control w-full">
                                     <div className="label">
                                         <span className="label-text text-xl">Number of parson</span>
@@ -247,7 +239,7 @@ const UpdateRoom = () => {
                                     <div className="label">
                                         <span className="label-text text-xl">Hotel Address</span>
                                     </div>
-                                    <input name="hotelAddress" type="text" placeholder="Validity here" className="input input-bordered w-full" />
+                                    <input defaultValue={hotelAddress} name="hotelAddress" type="text" placeholder="Validity here" className="input input-bordered w-full" />
                                 </label>
                                 <label className="form-control w-full">
                                     <div className="label">
