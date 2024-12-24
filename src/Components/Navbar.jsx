@@ -11,6 +11,7 @@ const Navbar = () => {
         logOut();
     }
 
+
     return (
         <div className="bg-teal-200 ">
             <div className="navbar w-11/12 mx-auto">
