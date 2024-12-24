@@ -33,11 +33,12 @@ const Navbar = () => {
                         <ul
                             tabIndex={0}
                             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                            <li><a>Item 1</a></li>
-                            <li><a>Item 3</a></li>
+                            <NavLink to={"/"}>Home</NavLink>
+                            <NavLink to={"/rooms"}>Rooms</NavLink>
+                            <NavLink to={"/my-booking"}>My Bookings</NavLink>
                         </ul>
                     </div>
-                    <a className="btn btn-ghost text-xl uppercase font-bold">Hotel <span className="text-teal-700">Master</span></a>
+                    <NavLink to={"/"}><h1 className="text-xl uppercase font-bold">Hotel <span className="text-teal-700">Master</span></h1></NavLink>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 flex gap-5 uppercase *:border-b-black *:border-b">

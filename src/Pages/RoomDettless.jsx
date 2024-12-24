@@ -143,6 +143,28 @@ const RoomDettless = () => {
             console.log(err);
             toast.error("sothing is wrong")
         }
+
+
+        //update reviwe
+
+        const statusUpadte = { roomStatus: roomStatus, newrating: 1 + reviews.length }
+
+
+
+        try {
+            const { data } = await axios.put(`${import.meta.env.VITE_API_LINK}/updateStatus/${id}`, statusUpadte)
+            console.log(data);
+
+        } catch (err) {
+            console.log(err);
+            toast.error("sothing is wrong")
+        }
+
+
+
+
+
+
         fatchallReview();
         document.getElementById('my_modal_1').close()
 

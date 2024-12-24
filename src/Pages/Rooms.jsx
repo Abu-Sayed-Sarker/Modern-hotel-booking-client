@@ -25,7 +25,7 @@ const Rooms = () => {
 
     return (
         <div className="w-11/12 mx-auto">
-            <h1 className="text-2xl lg:text-4xl text-teal-500 py-10 text-center font-bold">All Books</h1>
+            <h1 className="text-2xl lg:text-5xl text-teal-500 py-10 text-center font-bold">All Books</h1>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 {

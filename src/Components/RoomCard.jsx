@@ -10,7 +10,7 @@ const RoomCard = ({ room }) => {
         fee,
         description,
         hotelAddress,
-        totalreview
+        rating
 
     } = room || {};
     return (
@@ -30,7 +30,7 @@ const RoomCard = ({ room }) => {
                         <p>{hotelAddress}</p>
                         <p>{description.substring(0, 60)}......</p>
                         <div className="card-actions justify-center">
-                            <div className="badge badge-outline">Total Review {totalreview}</div>
+                            <div className="badge badge-outline">Total Review {rating}</div>
                             <div className="badge badge-outline">One night</div>
                             <div className="badge badge-outline">BDT {fee} TK</div>
                         </div>
