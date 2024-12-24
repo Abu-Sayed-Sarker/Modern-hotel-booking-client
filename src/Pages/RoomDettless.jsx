@@ -73,6 +73,7 @@ const RoomDettless = () => {
         const bookigData = {
             bookingDate: value,
             roomId: _id,
+            currentDate: new Date(),
             clinetEmail: user.email,
             roomDetails: room
         }

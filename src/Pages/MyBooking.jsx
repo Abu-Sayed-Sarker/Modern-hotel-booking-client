@@ -20,7 +20,6 @@ const MyBooking = () => {
         fatchallData();
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [user])
-    console.log(rooms)
 
 
     const fatchallData = async () => {
@@ -57,6 +56,22 @@ const MyBooking = () => {
         }
     }
 
+    const updatebooking = async (newDate, id) => {
+        const dateUpadte = { newDate }
+
+
+
+        try {
+            const { data } = await axios.put(`${import.meta.env.VITE_API_LINK}/dateUpdate/${id}`, dateUpadte)
+            fatchallData()
+            console.log(data);
+
+        } catch (err) {
+            console.log(err);
+            toast.error("sothing is wrong")
+        }
+
+    }
 
 
 
@@ -83,7 +98,7 @@ const MyBooking = () => {
                         </thead>
                         <tbody>
                             {
-                                rooms.map(room => <MyBookinRow key={room._id} room={room} handelDaleteroom={handelDaleteroom}></MyBookinRow>)
+                                rooms.map(room => <MyBookinRow key={room._id} room={room} handelDaleteroom={handelDaleteroom} updatebooking={updatebooking}></MyBookinRow>)
                             }
                         </tbody>
                     </table>
