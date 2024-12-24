@@ -40,7 +40,6 @@ const RoomDettless = () => {
         fee,
         roomSize,
         description,
-        rating,
         _id
     } = room || {};
 
@@ -220,7 +219,7 @@ const RoomDettless = () => {
                         <h1 className="text-xl font-semibold">{owner?.name}</h1>
 
 
-                        <p>Rating : {rating}</p>
+                        <p>Rating : {room.rating}</p>
 
                     </div>
                 </div>
