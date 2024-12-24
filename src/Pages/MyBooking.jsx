@@ -3,6 +3,9 @@
 import { useContext, useEffect, useState } from "react";
 import useAxiosSrc from "../Hooks/useAxiosSrc";
 import { AuthContext } from "../Provider/AuthProvider";
+import MyBookinRow from "../Components/MyBookinRow";
+import axios from "axios";
+import toast from "react-hot-toast";
 
 const MyBooking = () => {
 
@@ -10,6 +13,8 @@ const MyBooking = () => {
 
     const axiosSrc = useAxiosSrc();
     const [rooms, setRooms] = useState([])
+
+
 
     useEffect(() => {
         fatchallData();
@@ -24,6 +29,32 @@ const MyBooking = () => {
     }
 
 
+    const handelDaleteroom = async id => {
+        try {
+            const { data } = await axios.delete(`${import.meta.env.VITE_API_LINK}/bookin-delet/${id}`)
+            const newJob = rooms.filter(r => r._id !== id);
+            setRooms(newJob);
+            console.log(data);
+
+        } catch (err) {
+            console.log(err);
+            toast.error("somthing is wrong")
+
+        }
+
+        const statusUpadte = { roomStatus: "available" }
+
+
+
+        try {
+            const { data } = await axios.put(`${import.meta.env.VITE_API_LINK}/updateStatus/${id}`, statusUpadte)
+            console.log(data);
+
+        } catch (err) {
+            console.log(err);
+            toast.error("sothing is wrong")
+        }
+    }
 
 
 
@@ -35,8 +66,26 @@ const MyBooking = () => {
             <div className="w-11/12 mx-auto">
                 <h1 className="text-2xl lg:text-5xl text-teal-500 py-10 text-center font-bold">My All Booking Rooms</h1>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                    {/* <BookingRoomCard></BookingRoomCard> */}
+                <div className="overflow-x-auto">
+                    <h1 className="text-2xl text-teal-500">{rooms.length} Rooms</h1>
+                    <table className="table">
+                        {/* head */}
+                        <thead>
+                            <tr>
+                                <th>Photo</th>
+                                <th>Hotel Name</th>
+                                <th>Price</th>
+                                <th>Date</th>
+                                <th>Description</th>
+                                <th>Modify</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {
+                                rooms.map(room => <MyBookinRow key={room._id} room={room} handelDaleteroom={handelDaleteroom}></MyBookinRow>)
+                            }
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>

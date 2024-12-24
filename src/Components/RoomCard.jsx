@@ -28,7 +28,7 @@ const RoomCard = ({ room }) => {
                             <div className="badge badge-secondary">{roomStatus}</div>
                         </h2>
                         <p>{hotelAddress}</p>
-                        <p>{description.substring(0, 60)}......</p>
+                        <p>{description ? description.substring(0, 60) : ""}......</p>
                         <div className="card-actions justify-center">
                             <div className="badge badge-outline">Total Review {rating}</div>
                             <div className="badge badge-outline">One night</div>

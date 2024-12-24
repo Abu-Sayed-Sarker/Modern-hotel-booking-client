@@ -26,8 +26,6 @@ const RoomDettless = () => {
 
     const [value, onChange] = useState(new Date())
 
-    const [status, setStatus] = useState("")
-
 
 
     const {
@@ -89,8 +87,6 @@ const RoomDettless = () => {
         }
 
         // update room data
-        setStatus("unavailable")
-        console.log(status);
 
         const statusUpadte = { roomStatus: "unavailable", newrating: reviews.length }
 

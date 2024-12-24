@@ -5,16 +5,17 @@ import { Link } from "react-router-dom";
 
 const FeatuedCard = ({ room }) => {
     const {
-
         hotelName,
         roomPhoto,
-        roomStatus,
-        fee,
+        facilities,
         description,
         hotelAddress,
-        rating
-
     } = room || {};
+
+    const newArray = facilities ? facilities.filter(f => f !== "") : "";
+
+
+
     return (
         <div>
 
@@ -27,15 +28,20 @@ const FeatuedCard = ({ room }) => {
                 <div className="card-body">
                     <h2 className="card-title">
                         {hotelName}
-                        <div className="badge badge-secondary">{roomStatus}</div>
                     </h2>
                     <p>{hotelAddress}</p>
                     <p>{description.substring(0, 100)}......</p>
-                    <div className="card-actions justify-center">
-                        <div className="badge badge-outline">Total Review {rating}</div>
-                        <div className="badge badge-outline">One night</div>
-                        <div className="badge badge-outline">BDT {fee} TK</div>
+
+                    <div className="flex justify-between pt-4">
+                        {
+                            newArray.length >= 0 ? <div className="badge badge-outline">{newArray[0]}</div> : ""
+                        }
+                        {
+                            newArray.length > 1 ? <div className="badge badge-outline">{newArray[1]}</div> : ""
+                        }
+
                     </div>
+
                     <div className="mt-4">
                         <Link to={'/rooms'}><button className="w-full bg-teal-200 hover:bg-teal-600 py-2 rounded-2xl font-semibold">Book Now</button></Link>
                     </div>

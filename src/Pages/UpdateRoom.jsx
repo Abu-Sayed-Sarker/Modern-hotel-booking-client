@@ -70,17 +70,17 @@ const UpdateRoom = () => {
 
 
         // array 
-        const in1 = e.target.in1.checked == true ? form.get("in1") : "";
-        const in2 = e.target.in2.checked == true ? form.get("in2") : "";
-        const in3 = e.target.in3.checked == true ? form.get("in3") : "";
-        const in4 = e.target.in4.checked == true ? form.get("in4") : "";
-        const in5 = e.target.in5.checked == true ? form.get("in5") : "";
-        const in6 = e.target.in6.checked == true ? form.get("in6") : "";
-        const in7 = e.target.in7.checked == true ? form.get("in7") : "";
-        const in8 = e.target.in8.checked == true ? form.get("in8") : "";
+        const in1 = e.target.in1.checked == true ? form.get("in1") : facilities[0];
+        const in2 = e.target.in2.checked == true ? form.get("in2") : facilities[1];
+        const in3 = e.target.in3.checked == true ? form.get("in3") : facilities[2];
+        const in4 = e.target.in4.checked == true ? form.get("in4") : facilities[3];
+        const in5 = e.target.in5.checked == true ? form.get("in5") : facilities[4];
+        const in6 = e.target.in6.checked == true ? form.get("in6") : facilities[5];
+        const in7 = e.target.in7.checked == true ? form.get("in7") : facilities[6];
+        const in8 = e.target.in8.checked == true ? form.get("in8") : facilities[7];
 
 
-        const newfacilities = [in1, in2, in3, in4, in5, in6, in7, in8]
+        const newfacilities = [in1, in2, in3, in4, in5, in6, in7, in8];
 
 
         const newData = {
@@ -89,7 +89,7 @@ const UpdateRoom = () => {
             roomPhoto: nroomPhoto,
             roomStatus: nroomStatus,
             roomTittle: nroomTittle,
-            facilities: newfacilities ? newfacilities : facilities,
+            facilities: newfacilities,
             paerson: npaerson,
             fee: nfee,
             hotelAddress: nhotelAddress,

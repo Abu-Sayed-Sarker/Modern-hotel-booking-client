@@ -18,9 +18,9 @@ const UserReview = () => {
         setReviews(data)
     }
     return (
-        <div className="w-10/12 mx-auto">
-            <h1 className='text-2xl lg:text-5xl font-semibold text-teal-500 text-center pt-10'>Hotels Map</h1>
-            <p className='pt-5 pb-10 max-w-3xl mx-auto text-center'>Below is the list of best and quality hotels. These hotels offer choice and extra features. If you are looking for a good hotel for a luxurious and relaxing stay, click on the Book Now button below.</p>
+        <div className="w-10/12 mx-auto mt-16">
+            <h1 className='text-2xl lg:text-5xl font-semibold text-teal-500 text-center pt-10'>User Reviews</h1>
+            <p className='pt-5 pb-10 max-w-3xl mx-auto text-center'>See what our guests are saying about their stay! Read authentic feedback to help you choose the perfect room for your next visit. Share your experience and help others make the right choice!</p>
 
             <div>
                 <div className="carousel carousel-vertical w-full rounded-box h-96">
