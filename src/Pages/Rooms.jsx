@@ -2,8 +2,10 @@ import { useEffect, useState } from "react";
 import useAxiosSrc from "../Hooks/useAxiosSrc";
 
 import RoomCard from "../Components/RoomCard";
+import ReactHelmet from "../Components/ReactHelmet";
 
 const Rooms = () => {
+    <ReactHelmet tittle={"Rooms page"}></ReactHelmet>
 
     const axiosSrc = useAxiosSrc()
     const [rooms, setRooms] = useState([]);

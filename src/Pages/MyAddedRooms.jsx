@@ -4,6 +4,7 @@ import { AuthContext } from "../Provider/AuthProvider";
 import useAxiosSrc from "../Hooks/useAxiosSrc";
 import toast from 'react-hot-toast'
 import axios from "axios";
+import ReactHelmet from "../Components/ReactHelmet";
 
 // 
 const MyAddedRooms = () => {
@@ -20,6 +21,7 @@ const MyAddedRooms = () => {
 
 
     const fatchallData = async () => {
+        <ReactHelmet tittle={"My added rooms page"}></ReactHelmet>
         const { data } = await axiosSrc.get(`/all-rooms/${user.email}`)
         setRooms(data)
     }

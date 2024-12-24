@@ -3,8 +3,10 @@ import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
+import ReactHelmet from "../Components/ReactHelmet";
 
 const UpdateRoom = () => {
+    <ReactHelmet tittle={"Update Room"}></ReactHelmet>
     const { id } = useParams()
     // const axiosSrc = useAxiosSrc()
     const [room, setRoom] = useState({});

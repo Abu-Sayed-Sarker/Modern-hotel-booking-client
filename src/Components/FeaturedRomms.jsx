@@ -12,7 +12,7 @@ const FeaturedRomms = () => {
         fatchallData();
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
-    console.log(rooms)
+
 
 
     const fatchallData = async () => {

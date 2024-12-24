@@ -4,8 +4,10 @@ import { useMutation } from "@tanstack/react-query"
 import useAxiosSrc from "../Hooks/useAxiosSrc";
 import toast from "react-hot-toast"
 import { useNavigate } from "react-router-dom";
+import ReactHelmet from "../Components/ReactHelmet";
 
 const AddRoomData = () => {
+    <ReactHelmet tittle={"Add room page"}></ReactHelmet>
     const axiosSrc = useAxiosSrc();
     const navigate = useNavigate()
     const { user } = useContext(AuthContext);

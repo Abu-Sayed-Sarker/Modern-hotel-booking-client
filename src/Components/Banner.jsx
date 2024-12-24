@@ -17,9 +17,9 @@ const Banner = () => {
                             className="w-full  h-[90vh]" />
                         <div className='absolute top-0 w-full backdrop-blur-sm h-[90vh]'>
 
-                            <h1 className='lg:pt-40 pt-56 uppercase lg:text-9xl text-5xl font-bold text-teal-600 text-center'>Study Abroad</h1>
+                            <h1 className='lg:pt-40 pt-56 uppercase lg:text-9xl text-5xl font-bold text-teal-600 text-center'>Standard Room</h1>
 
-                            <p className='lg:text-4xl lg:px-0 px-4 text-xl text-center max-w-6xl text-teal-400 mx-auto'>If you want to study abroad, then to fulfill your dream, we have brought you all the best student visas that will make your dream of studying abroad come true.</p>
+                            <p className='lg:text-4xl lg:px-0 px-4 text-xl text-center max-w-6xl text-teal-400 mx-auto'>Indulge in a luxurious suite with a separate living area, large king bed, and stunning views. Perfect for longer stays or special occasions.</p>
                             <div className="flex justify-center mt-8">
                                 <Link to={'/rooms'}><button className="border border-teal-500 rounded-full gap-3 py-3 px-12 bg-teal-200 hover:bg-teal-700">Booking now</button></Link>
                             </div>
@@ -39,9 +39,9 @@ const Banner = () => {
                             className="w-full  h-[90vh]" />
                         <div className='absolute top-0 w-full backdrop-blur-sm h-[90vh]'>
 
-                            <h1 className='lg:pt-40 pt-56 uppercase lg:text-9xl text-5xl font-bold text-teal-600 text-center'>Jov in avrode</h1>
+                            <h1 className='lg:pt-40 pt-56 uppercase lg:text-9xl text-5xl font-bold text-teal-600 text-center'>Executive Room</h1>
 
-                            <p className='lg:text-4xl lg:px-0 px-4 text-xl text-center max-w-6xl text-teal-400 mx-auto'>If you want to work abroad then to fulfill your dream we have brought you all the best office visas that will make your dream of working abroad come true.</p>
+                            <p className='lg:text-4xl lg:px-0 px-4 text-xl text-center max-w-6xl text-teal-400 mx-auto'>Designed for business travelers, this room offers a large desk, fast Wi-Fi, and a quiet atmosphere to ensure productivity and comfort.</p>
 
                             <div className="flex justify-center mt-8">
                                 <Link to={'/rooms'}><button className="border border-teal-500 rounded-full gap-3 py-3 px-12 bg-teal-200 hover:bg-teal-700">Booking now</button></Link>
@@ -62,10 +62,10 @@ const Banner = () => {
                             className="w-full  h-[90vh]" />
                         <div className='absolute top-0 w-full backdrop-blur-sm h-[90vh]'>
 
-                            <h1 className='lg:pt-40 pt-56 uppercase lg:text-9xl text-5xl font-bold text-teal-600 text-center'>World tour</h1>
+                            <h1 className='lg:pt-40 pt-56 uppercase lg:text-9xl text-5xl font-bold text-teal-600 text-center'>Luxury Room</h1>
 
 
-                            <p className='lg:text-4xl lg:px-0 px-4 text-xl text-center max-w-6xl text-teal-400 mx-auto'>To make your world tour dreams come true, we have brought you the opportunity to visit some of the best and most popular countries. So don&apos;t delay and book the tourist visa of your choice now</p>
+                            <p className='lg:text-4xl lg:px-0 px-4 text-xl text-center max-w-6xl text-teal-400 mx-auto'>Experience ultimate luxury with a spacious room, modern decor, and high-end amenities, including a jacuzzi and a stunning view of the city skyline.</p>
 
                             <div className="flex justify-center mt-8">
                                 <Link to={'/rooms'}><button className="border border-teal-500 rounded-full gap-3 py-3 px-12 bg-teal-200 hover:bg-teal-700">Booking now</button></Link>

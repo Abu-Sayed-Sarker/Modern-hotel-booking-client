@@ -3,9 +3,11 @@ import { Link, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { toast } from "react-hot-toast";
+import ReactHelmet from "../../Components/ReactHelmet";
 
 const Register = () => {
 
+    <ReactHelmet tittle={"Register page"}></ReactHelmet>
     const { setUser, registerAcount, updateUserProfile, signInWithGoogle } = useContext(AuthContext)
 
     const navigate = useNavigate();

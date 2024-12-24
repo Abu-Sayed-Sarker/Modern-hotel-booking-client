@@ -3,8 +3,10 @@ import { FaGoogle } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 import toast from "react-hot-toast";
+import ReactHelmet from "../../Components/ReactHelmet";
 
 const Login = () => {
+    <ReactHelmet tittle={"Log In page"}></ReactHelmet>
     const { signInWithGoogle, logIn } = useContext(AuthContext);
 
     const navigate = useNavigate();

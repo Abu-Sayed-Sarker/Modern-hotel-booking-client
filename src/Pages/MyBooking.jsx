@@ -6,9 +6,10 @@ import { AuthContext } from "../Provider/AuthProvider";
 import MyBookinRow from "../Components/MyBookinRow";
 import axios from "axios";
 import toast from "react-hot-toast";
+import ReactHelmet from "../Components/ReactHelmet";
 
 const MyBooking = () => {
-
+    <ReactHelmet tittle={"My booking page"}></ReactHelmet>
     const { user } = useContext(AuthContext)
 
     const axiosSrc = useAxiosSrc();
@@ -57,6 +58,7 @@ const MyBooking = () => {
     }
 
     const updatebooking = async (newDate, id) => {
+
         const dateUpadte = { newDate }
 
 

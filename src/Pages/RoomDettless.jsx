@@ -10,10 +10,12 @@ import { AuthContext } from "../Provider/AuthProvider";
 import { useMutation } from "@tanstack/react-query";
 import useAxiosSrc from "../Hooks/useAxiosSrc";
 import toast from "react-hot-toast";
+import ReactHelmet from "../Components/ReactHelmet";
 
 
 
 const RoomDettless = () => {
+    <ReactHelmet tittle={"Room dittles"}></ReactHelmet>
     const { id } = useParams()
 
     const { user } = useContext(AuthContext)
