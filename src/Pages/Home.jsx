@@ -5,6 +5,8 @@ import ReactHelmet from "../Components/ReactHelmet";
 import UserReaview from "../Components/UserReview";
 import { useEffect } from "react";
 import img from '../assets/ads.jpg'
+import PopularServices from "../Components/PopularServices";
+import About from "../Components/About";
 
 
 const Home = () => {
@@ -18,6 +20,8 @@ const Home = () => {
             <FeaturedRomms></FeaturedRomms>
             <Map></Map>
             <UserReaview></UserReaview>
+            <PopularServices></PopularServices>
+            <About></About>
             <div>
                 {/* You can open the modal using document.getElementById('ID').showModal() method */}
                 {/* <button className="btn" onClick={() => document.getElementById('my_modal_3').showModal()}>open modal</button> */}

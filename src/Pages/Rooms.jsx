@@ -34,12 +34,16 @@ const Rooms = () => {
             <h1 className="text-2xl lg:text-5xl text-teal-500 pt-10 pb-5 text-center font-bold">All Books</h1>
             <div className="flex justify-between pb-10">
                 <h1 className="text-xl text-teal-400 font-semibold">Filter Room by price</h1>
-                <div>
-                    <span className="text-base font-semibold pr-2">Min price: </span>
-                    <input onChange={(e) => setMinPrice(e.target.value)} className="p-2 border border-teal-600 rounded-2xl" type="number" />
+                <div className="flex flex-col lg:flex-row">
+                    <div>
+                        <span className="text-base font-semibold pr-2">Min price: </span>
+                        <input onChange={(e) => setMinPrice(e.target.value)} className="p-2 border border-teal-600 rounded-2xl" type="number" />
+                    </div>
 
-                    <span className="text-base font-semibold px-2">Max price: </span>
-                    <input onChange={(e) => setMaxPrice(e.target.value)} className="p-2 border border-teal-600 rounded-2xl" type="number" />
+                    <div>
+                        <span className="text-base font-semibold px-2">Max price: </span>
+                        <input onChange={(e) => setMaxPrice(e.target.value)} className="p-2 border border-teal-600 rounded-2xl" type="number" />
+                    </div>
 
                 </div>
             </div>

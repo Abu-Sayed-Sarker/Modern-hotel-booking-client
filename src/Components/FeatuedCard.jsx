@@ -32,7 +32,7 @@ const FeatuedCard = ({ room }) => {
                     <p>{hotelAddress}</p>
                     <p>{description.substring(0, 100)}......</p>
 
-                    <div className="flex justify-between pt-4">
+                    <div className="flex lg:justify-between lg:flex-row md:flex-row flex-col gap-2 lg:gap-0 pt-4">
                         {
                             newArray.length >= 0 ? <div className="badge badge-outline">{newArray[0]}</div> : ""
                         }
