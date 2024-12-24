@@ -26,6 +26,8 @@ const RoomDettless = () => {
 
     const [value, onChange] = useState(new Date())
 
+    const [status, setStatus] = useState("")
+
 
 
     const {
@@ -66,12 +68,15 @@ const RoomDettless = () => {
 
         setReview(true);
 
+        if (value < new Date()) {
+            return toast.error("Enter right Booking Date")
+        }
+
         const bookigData = {
             bookingDate: value,
             roomId: _id,
             clinetEmail: user.email,
         }
-
         // post Data in data base 
 
         try {
@@ -84,6 +89,8 @@ const RoomDettless = () => {
         }
 
         // update room data
+        setStatus("unavailable")
+        console.log(status);
 
         const statusUpadte = { roomStatus: "unavailable", newrating: reviews.length }
 
