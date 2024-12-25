@@ -37,6 +37,7 @@ const Navbar = () => {
                             <NavLink to={"/"}>Home</NavLink>
                             <NavLink to={"/rooms"}>Rooms</NavLink>
                             <NavLink to={"/my-booking"}>My Bookings</NavLink>
+                            {user ? <button className="font-[450]" onClick={handelLogout}>Log Out</button> : <NavLink to={"/login"}><button className="font-[450]">Log In</button></NavLink>}
                         </ul>
                     </div>
                     <NavLink to={"/"}><h1 className="text-xl uppercase font-bold">Hotel <span className="text-teal-700">Master</span></h1></NavLink>

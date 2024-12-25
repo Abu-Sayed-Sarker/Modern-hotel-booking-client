@@ -69,11 +69,13 @@ const RoomDettless = () => {
 
     const handleBookButn = async () => {
 
-        setReview(true);
 
-        if (value > new Date()) {
+
+        if (new Date(value) < new Date()) {
             return toast.error("Enter right Booking Date")
         }
+
+        setReview(true);
 
         const bookigData = {
             bookingDate: value,
@@ -294,60 +296,62 @@ const RoomDettless = () => {
 
 
             <div>
-                <h1 className="text-2xl text-teal-500 mb-11">User Review :</h1>
-
-                {/* Open the modal using document.getElementById('ID').showModal() method */}
-
-                <dialog id="my_modal_1" className="modal">
-                    <div className="modal-box">
-                        <h1 className="text-2xl text-teal-500 font-semibold">Give Your Review</h1>
-                        <div className="modal-action">
-                            <form onSubmit={handelReveiw} className="space-y-3 flex flex-col w-full" method="dialog">
-
-                                <div className="flex gap-3">
-                                    <input name="userName" type="text" disabled defaultValue={user.displayName} placeholder="Type here" className="input input-bordered w-full max-w-xs" />
-                                    <input name="rating" type="number" placeholder="Give rating 1 to 5" className="input input-bordered w-full max-w-xs" />
-                                </div>
-
-                                <textarea name="comment" className="textarea textarea-bordered w-full" placeholder="Comment here......"></textarea>
-
-
-                                {/* if there is a button in form, it will close the modal */}
-                                <button className="btn bg-teal-200 hover:bg-teal-600 ">Give Review</button>
-                            </form>
-                        </div>
-                    </div>
-                </dialog>
-
                 <div>
-                    {
-                        reviews.map(revi => <div className="py-4 space-y-2" key={revi._id}>
-                            <div className="flex gap-4">
-                                <div>
-                                    <div className="w-10 rounded-full overflow-hidden bg-teal-100/55 border-4 ">
-                                        <img
-                                            alt="Tailwind CSS Navbar component"
-                                            referrerPolicy='no-referrer'
-                                            src={revi.photo ? revi.photo : img} />
+                    <h1 className="text-2xl text-teal-500 mb-11">User Review :</h1>
+
+                    {/* Open the modal using document.getElementById('ID').showModal() method */}
+
+                    <dialog id="my_modal_1" className="modal">
+                        <div className="modal-box">
+                            <h1 className="text-2xl text-teal-500 font-semibold">Give Your Review</h1>
+                            <div className="modal-action">
+                                <form onSubmit={handelReveiw} className="space-y-3 flex flex-col w-full" method="dialog">
+
+                                    <div className="flex gap-3">
+                                        <input name="userName" type="text" disabled defaultValue={user.displayName} placeholder="Type here" className="input input-bordered w-full max-w-xs" />
+                                        <input name="rating" type="number" placeholder="Give rating 1 to 5" className="input input-bordered w-full max-w-xs" />
+                                    </div>
+
+                                    <textarea name="comment" className="textarea textarea-bordered w-full" placeholder="Comment here......"></textarea>
+
+
+                                    {/* if there is a button in form, it will close the modal */}
+                                    <button className="btn bg-teal-200 hover:bg-teal-600 ">Give Review</button>
+                                </form>
+                            </div>
+                        </div>
+                    </dialog>
+
+                    <div>
+                        {
+                            reviews.map(revi => <div className="py-4 space-y-2" key={revi._id}>
+                                <div className="flex gap-4">
+                                    <div>
+                                        <div className="w-10 rounded-full overflow-hidden bg-teal-100/55 border-4 ">
+                                            <img
+                                                alt="Tailwind CSS Navbar component"
+                                                referrerPolicy='no-referrer'
+                                                src={revi.photo ? revi.photo : img} />
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h1 className="text-xl">{revi.userName}</h1>
+                                        <p>
+                                            <ReactStars
+                                                count={5}
+                                                size={24}
+                                                value={revi?.rating}
+                                                color2={'#ffd700'}
+                                                edit={false} />
+                                        </p>
                                     </div>
                                 </div>
-                                <div>
-                                    <h1 className="text-xl">{revi.userName}</h1>
-                                    <p>
-                                        <ReactStars
-                                            count={5}
-                                            size={24}
-                                            value={revi?.rating}
-                                            color2={'#ffd700'}
-                                            edit={false} />
-                                    </p>
-                                </div>
-                            </div>
-                            <p>{revi.date}</p>
-                            <p className="pb-4">{revi.comment}</p>
-                            <hr />
-                        </div>)
-                    }
+                                <p>{revi.date}</p>
+                                <p className="pb-4">{revi.comment}</p>
+                                <hr />
+                            </div>)
+                        }
+                    </div>
                 </div>
             </div>
 

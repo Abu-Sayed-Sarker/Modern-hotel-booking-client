@@ -1,12 +1,12 @@
 import Banner from "../Components/Banner";
 import FeaturedRomms from "../Components/FeaturedRomms";
-import Map from "../Components/Map";
 import ReactHelmet from "../Components/ReactHelmet";
 import UserReaview from "../Components/UserReview";
 import { useEffect } from "react";
 import img from '../assets/ads.jpg'
 import PopularServices from "../Components/PopularServices";
 import About from "../Components/About";
+import HotelMap from "../Components/HotelMap";
 
 
 const Home = () => {
@@ -18,7 +18,7 @@ const Home = () => {
         <div className="">
             <Banner></Banner>
             <FeaturedRomms></FeaturedRomms>
-            <Map></Map>
+            <HotelMap></HotelMap>
             <UserReaview></UserReaview>
             <PopularServices></PopularServices>
             <About></About>
