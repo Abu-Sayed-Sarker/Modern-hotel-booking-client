@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import useAxiosSrc from "../Hooks/useAxiosSrc";
 import img from '../assets/img.png';
+import ReactStars from 'react-stars';
 
 const UserReview = () => {
     const axiosSrc = useAxiosSrc()
@@ -37,7 +38,12 @@ const UserReview = () => {
                                 </div>
                                 <div>
                                     <h1 className="text-xl">{revi.userName}</h1>
-                                    <p><span>Rating: 5 / </span>{revi?.rating}</p>
+                                    <p><ReactStars
+                                        count={5}
+                                        size={24}
+                                        value={revi?.rating}
+                                        color2={'#ffd700'}
+                                        edit={false} /></p>
                                 </div>
                             </div>
                             <p>{revi.date}</p>

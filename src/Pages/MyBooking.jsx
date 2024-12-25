@@ -74,6 +74,7 @@ const MyBooking = () => {
         try {
             const { data } = await axios.put(`${import.meta.env.VITE_API_LINK}/dateUpdate/${id}`, dateUpadte)
             fatchallData()
+            toast.success("Update your date update!")
             console.log(data);
 
         } catch (err) {

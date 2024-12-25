@@ -11,6 +11,8 @@ import { useMutation } from "@tanstack/react-query";
 import useAxiosSrc from "../Hooks/useAxiosSrc";
 import toast from "react-hot-toast";
 import ReactHelmet from "../Components/ReactHelmet";
+import ReactStars from 'react-stars'
+
 
 
 
@@ -331,7 +333,14 @@ const RoomDettless = () => {
                                 </div>
                                 <div>
                                     <h1 className="text-xl">{revi.userName}</h1>
-                                    <p><span>Rating: 5 / </span>{revi?.rating}</p>
+                                    <p>
+                                        <ReactStars
+                                            count={5}
+                                            size={24}
+                                            value={revi?.rating}
+                                            color2={'#ffd700'}
+                                            edit={false} />
+                                    </p>
                                 </div>
                             </div>
                             <p>{revi.date}</p>

@@ -23,8 +23,6 @@ const Home = () => {
             <PopularServices></PopularServices>
             <About></About>
             <div>
-                {/* You can open the modal using document.getElementById('ID').showModal() method */}
-                {/* <button className="btn" onClick={() => document.getElementById('my_modal_3').showModal()}>open modal</button> */}
                 <dialog id="my_modal_3" className="modal">
                     <div className="modal-box p-0">
                         <form method="dialog">
