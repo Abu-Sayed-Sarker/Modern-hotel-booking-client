@@ -10,12 +10,14 @@ import PrivetRoute from "./PrivetRoute";
 import MyAddedRooms from "../Pages/MyAddedRooms";
 import UpdateRoom from "../Pages/UpdateRoom";
 import RoomDettless from "../Pages/RoomDettless";
+import Error from "../Components/Error";
 
 
 const Route = createBrowserRouter([
     {
         path: '/',
         element: <Layout></Layout>,
+        errorElement: <Error></Error>,
         children: [
             {
                 path: '/',

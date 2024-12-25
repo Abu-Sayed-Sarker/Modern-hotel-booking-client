@@ -46,6 +46,7 @@ const Navbar = () => {
                         <NavLink to={"/"}>Home</NavLink>
                         <NavLink to={"/rooms"}>Rooms</NavLink>
                         <NavLink to={"/my-booking"}>My Bookings</NavLink>
+                        {user ? <button className="font-[450]" onClick={handelLogout}>Log Out</button> : <NavLink to={"/login"}><button className="font-[450]">Log In</button></NavLink>}
 
                     </ul>
                 </div>
@@ -64,9 +65,6 @@ const Navbar = () => {
                             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-4 shadow flex flex-col gap-3">
                             <NavLink to={'/addroom'}><button>Add Room</button></NavLink>
                             <NavLink to={'/myaddedrooms'}><button>My Added Rooms</button></NavLink>
-
-
-                            {user ? <button onClick={handelLogout}>Log Out</button> : <NavLink to={"/login"}><button>Log In</button></NavLink>}
                         </ul>
                     </div>
                 </div>

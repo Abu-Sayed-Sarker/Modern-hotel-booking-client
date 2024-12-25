@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Navigate } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
+import LodingSpner from "../Components/LodingSpner";
 
 // eslint-disable-next-line react/prop-types
 const PrivetRoute = ({ children }) => {
@@ -9,7 +10,7 @@ const PrivetRoute = ({ children }) => {
 
 
 
-    if (loading) return <div>loding in runing</div>
+    if (loading) return <LodingSpner></LodingSpner>
     if (user) return children
 
 

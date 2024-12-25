@@ -45,6 +45,8 @@ const RoomDettless = () => {
         _id
     } = room || {};
 
+
+
     // bookin button handle 
 
     const newArray = facilities ? facilities.filter(f => f !== "") : "";
@@ -67,7 +69,7 @@ const RoomDettless = () => {
 
         setReview(true);
 
-        if (value < new Date()) {
+        if (value > new Date()) {
             return toast.error("Enter right Booking Date")
         }
 
@@ -195,7 +197,7 @@ const RoomDettless = () => {
         const { data } = await axios.get(`${import.meta.env.VITE_API_LINK}/allreview/${id}`)
         setReviews(data)
     }
-    console.log(reviews);
+
 
 
 
@@ -221,7 +223,7 @@ const RoomDettless = () => {
                         <h1 className="text-xl font-semibold">{owner?.name}</h1>
 
 
-                        <p>Rating : {room.rating}</p>
+                        <p>Rating : {reviews.length}</p>
 
                     </div>
                 </div>
