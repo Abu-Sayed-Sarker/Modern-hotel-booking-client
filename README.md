@@ -1,8 +1,53 @@
-# React + Vite
+** Project name**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Hotel Master
 
-Currently, two official plugins are available:
+**Live URL**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* Client site
+https://as-hotel-master.netlify.app/
+
+* Server Site
+https://hotel-master-server.vercel.app/
+
+**Purpose**
+
+If any user wants to find a luxurious hotel room according to his choice, then he can easily book the hotel room through our website. If you want to book a room of any category of a hotel, then you can do it very easily through our modern hotel booking website.
+
+
+**Key features**
+
+* The user can book the room according to his choice from the rooms page
+* The top rated rooms will be provided on the homepage so that the user can easily see the best quality rooms
+* The user can easily view the booked rooms from the My Booking page
+* JWT token is used so that one user cannot see data from another user
+* There is a login and registration section to secure all user information
+* Google login option is there to make authentication easier
+* After booking any room user can easily give his personal opinion through review and rating
+
+
+**npm packages**
+
+*  npm install axios
+*  npm install firebase
+*  npm install framer-motion
+*  npm install motion
+*  npm install react-date-picker
+*  npm install react-dom
+*  npm install react-helmet
+*  npm install react-hot-toast
+*  npm install react-icons
+*  npm install react-leaflet
+*  npm install react-router-dom
+*  npm install react-stars
+*  npm install swiper
+*  npm install moment
+
+
+**2 extra section in my website**
+
+* Add room
+* My added rooms
+
+
+  
