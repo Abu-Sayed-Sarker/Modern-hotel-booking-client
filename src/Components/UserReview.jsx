@@ -3,6 +3,7 @@ import useAxiosSrc from "../Hooks/useAxiosSrc";
 import img from '../assets/img.png';
 import ReactStars from 'react-stars';
 
+
 const UserReview = () => {
     const axiosSrc = useAxiosSrc()
     const [reviews, setReviews] = useState([]);
@@ -46,7 +47,8 @@ const UserReview = () => {
                                         edit={false} /></p>
                                 </div>
                             </div>
-                            <p>{revi.date}</p>
+                            <p> {revi.date}</p>
+
                             <p className="pb-4">{revi.comment}</p>
                             <hr />
                         </div>)

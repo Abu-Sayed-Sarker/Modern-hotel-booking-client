@@ -12,6 +12,7 @@ import useAxiosSrc from "../Hooks/useAxiosSrc";
 import toast from "react-hot-toast";
 import ReactHelmet from "../Components/ReactHelmet";
 import ReactStars from 'react-stars'
+import moment from "moment";
 
 
 
@@ -34,7 +35,6 @@ const RoomDettless = () => {
 
     const {
         owner,
-        hotelName,
         roomPhoto,
         roomStatus,
         roomTittle,
@@ -140,7 +140,7 @@ const RoomDettless = () => {
         const userName = from.userName.value;
         const rating = from.rating.value;
         const comment = from.comment.value;
-        const date = new Date();
+        const date = moment().format('MM/D/YYYY, h:mm:ss a');
         const roomId = _id
 
         if (rating > 5) return toast.error("enter rating 1 to 5 number!")
@@ -235,7 +235,7 @@ const RoomDettless = () => {
                     <img className="rounded-3xl overflow-hidden" src={roomPhoto} alt="" />
                 </div>
 
-                <h1 className="text-xl lg:text-4xl font-semibold text-teal-500 mt-8">{hotelName}</h1>
+                <h1 className="text-xl lg:text-4xl font-semibold text-teal-500 mt-8">{roomTittle}</h1>
 
                 <p className="flex items-center gap-3 py-5"><FaMapMarkerAlt /> {hotelAddress}</p>
 
@@ -346,7 +346,7 @@ const RoomDettless = () => {
                                         </p>
                                     </div>
                                 </div>
-                                <p>{revi.date}</p>
+                                <p> {revi.date}</p>
                                 <p className="pb-4">{revi.comment}</p>
                                 <hr />
                             </div>)

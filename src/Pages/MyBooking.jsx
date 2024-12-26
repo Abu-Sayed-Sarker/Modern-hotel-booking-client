@@ -8,6 +8,7 @@ import axios from "axios";
 import toast from "react-hot-toast";
 import ReactHelmet from "../Components/ReactHelmet";
 import DatePicker from "react-date-picker";
+import moment from "moment";
 
 const MyBooking = () => {
     <ReactHelmet tittle={"My booking page"}></ReactHelmet>
@@ -88,7 +89,9 @@ const MyBooking = () => {
 
 
     useEffect(() => {
-        fatchallReview();
+        if (currentid) {
+            fatchallReview();
+        }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [currentid])
 
@@ -104,6 +107,7 @@ const MyBooking = () => {
     // reviwe system implement
 
 
+
     // review system implement
 
     const handelReveiw = async (e, id) => {
@@ -115,7 +119,7 @@ const MyBooking = () => {
         const userName = from.userName.value;
         const rating = from.rating.value;
         const comment = from.comment.value;
-        const date = new Date();
+        const date = moment().format('MM/D/YYYY, h:mm:ss a');
         const roomId = id
 
         if (rating > 5) return toast.error("enter rating 1 to 5 number!")

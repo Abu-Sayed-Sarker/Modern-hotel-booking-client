@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const FeatuedCard = ({ room }) => {
     const {
-        hotelName,
+        roomTittle,
         roomPhoto,
         facilities,
         description,
@@ -27,7 +27,7 @@ const FeatuedCard = ({ room }) => {
                 </figure>
                 <div className="card-body">
                     <h2 className="card-title">
-                        {hotelName}
+                        {roomTittle}
                     </h2>
                     <p>{hotelAddress}</p>
                     <p>{description.substring(0, 100)}......</p>
