@@ -43,6 +43,7 @@ const MyBooking = () => {
         try {
             const { data } = await axios.delete(`${import.meta.env.VITE_API_LINK}/bookin-delet/${id}`)
             const newJob = rooms.filter(r => r._id !== id);
+            toast.success("Your booking cancelled successfully")
             setRooms(newJob);
             console.log(data);
 
@@ -75,7 +76,7 @@ const MyBooking = () => {
         try {
             const { data } = await axios.put(`${import.meta.env.VITE_API_LINK}/dateUpdate/${id}`, dateUpadte)
             fatchallData()
-            toast.success("Update your date update!")
+            toast.success("Your booking date updated!")
             console.log(data);
 
         } catch (err) {
@@ -128,6 +129,7 @@ const MyBooking = () => {
 
         try {
             const { data } = await axios.post(`${import.meta.env.VITE_API_LINK}/review`, reviewData)
+            toast.success("Thanks for your review")
             console.log(data);
 
         } catch (err) {

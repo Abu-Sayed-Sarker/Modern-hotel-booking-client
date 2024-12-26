@@ -88,7 +88,7 @@ const RoomDettless = () => {
 
         try {
             await mutateAsync(bookigData)
-            toast.success("Your Room is added successfilly.")
+            toast.success("Your Room is booked successfilly.")
 
         } catch (err) {
             console.log(err);
@@ -149,6 +149,7 @@ const RoomDettless = () => {
 
         try {
             const { data } = await axios.post(`${import.meta.env.VITE_API_LINK}/review`, reviewData)
+            toast.success("Thanks for your review")
             console.log(data);
 
         } catch (err) {
