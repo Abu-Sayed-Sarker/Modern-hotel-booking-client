@@ -13,7 +13,7 @@ https://as-hotel-master.netlify.app/
 https://hotel-master-server.vercel.app/
 
 
-Main tecnolog
+**Main tecnolog**
 
 * react
 * VIT
@@ -64,10 +64,10 @@ If any user wants to find a luxurious hotel room according to his choice, then h
 
 **Project install in local machine**
 
-* npm install
+npm install
 
-=> run in localhost
+* run in localhost
 
-* npm run dev
+npm run dev
 
   
