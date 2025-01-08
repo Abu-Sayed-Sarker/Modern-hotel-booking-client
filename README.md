@@ -1,3 +1,5 @@
+**A user-friendly platform for booking hotel rooms online with real-time availability, pricing, and instant booking confirmation.**
+
 ** Project name**
 
 Hotel Master
