@@ -12,6 +12,16 @@ https://as-hotel-master.netlify.app/
 * Server Site
 https://hotel-master-server.vercel.app/
 
+
+Main tecnolog
+
+* react
+* VIT
+* react router dom
+* firebase
+* tailwind CSS
+* daisy ui
+
 **Purpose**
 
 If any user wants to find a luxurious hotel room according to his choice, then he can easily book the hotel room through our website. If you want to book a room of any category of a hotel, then you can do it very easily through our modern hotel booking website.
@@ -51,5 +61,13 @@ If any user wants to find a luxurious hotel room according to his choice, then h
 * Add room
 * My added rooms
 
+
+**Project install in local machine**
+
+* npm install
+
+=> run in localhost
+
+* npm run dev
 
   
