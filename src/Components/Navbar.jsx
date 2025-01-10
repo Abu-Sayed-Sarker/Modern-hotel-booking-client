@@ -13,7 +13,7 @@ const Navbar = () => {
 
 
     return (
-        <div className="bg-teal-200 ">
+        <div className="bg-teal-200 fixed z-10 w-full">
             <div className="navbar w-11/12 mx-auto">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -44,8 +44,10 @@ const Navbar = () => {
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 flex gap-5 uppercase *:border-b-black *:border-b">
-                        <NavLink to={"/"}>Home</NavLink>
+                        <NavLink to={"/"}> <li>Home</li> </NavLink>
                         <NavLink to={"/rooms"}>Rooms</NavLink>
+                        <NavLink to={'/contactus'}>Contact Us</NavLink>
+                        <NavLink to={'/faq'}>FAQ</NavLink>
                         <NavLink to={"/my-booking"}>My Bookings</NavLink>
                         {user ? <button className="font-[450]" onClick={handelLogout}>Log Out</button> : <NavLink to={"/login"}><button className="font-[450]">Log In</button></NavLink>}
 

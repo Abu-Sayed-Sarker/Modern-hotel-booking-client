@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 import toast from "react-hot-toast";
 import ReactHelmet from "../../Components/ReactHelmet";
+import logInImg from '../../assets/Sign in-amico.png'
 
 const Login = () => {
     <ReactHelmet tittle={"Log In page"}></ReactHelmet>
@@ -47,7 +48,10 @@ const Login = () => {
     }
 
     return (
-        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-center w-11/12 mx-auto mt-10">
+            <div>
+                <img src={logInImg} alt="" className="w-1/2" />
+            </div>
             <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
                 <h1 className="lg:text-4xl text-teal-500 text-center pt-4 text-2xl">Log in now</h1>
                 <form
@@ -72,7 +76,7 @@ const Login = () => {
                 <div className="divider">OR</div>
                 <div className="pl-6">I have no acount <Link to={"/register"}><span className="text-red-500 underline">Register</span></Link></div>
                 <div className="flex justify-center p-4 pb-7">
-                    <button onClick={googlesignIn} className="flex items-center border border-teal-500 rounded-full gap-3 py-3 px-5 bg-teal-200 hover:bg-teal-700"><FaGoogle /> Google Log In</button>
+                    <button onClick={googlesignIn} className="flex items-center border border-teal-500 rounded-xl gap-3 py-3 px-5 bg-teal-200 hover:bg-teal-700"><FaGoogle /> Google Log In</button>
                 </div>
 
             </div>

@@ -27,7 +27,7 @@ const FeatuedCard = ({ room }) => {
                 </figure>
                 <div className="card-body">
                     <h2 className="card-title">
-                        {roomTittle}
+                        {roomTittle.substring(0, 35)}...
                     </h2>
                     <p>{hotelAddress}</p>
                     <p>{description.substring(0, 100)}......</p>

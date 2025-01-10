@@ -4,7 +4,7 @@ import { CiCalendar } from "react-icons/ci";
 
 const PopularServices = () => {
     return (
-        <div className="w-11/12 mx-auto">
+        <div className="w-11/12 mx-auto mt-16">
             <h1 className='text-2xl lg:text-5xl font-semibold text-teal-500 text-center pt-10'>Popular Services</h1>
             <p className='pt-5 pb-10 max-w-3xl mx-auto text-center'>Some of the important facilities of our hotel are provided in addition to these many other services are provided in our hotel.</p>
 

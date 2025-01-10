@@ -11,6 +11,8 @@ import MyAddedRooms from "../Pages/MyAddedRooms";
 import UpdateRoom from "../Pages/UpdateRoom";
 import RoomDettless from "../Pages/RoomDettless";
 import Error from "../Components/Error";
+import ContactUs from "../Pages/ContactUs";
+import FAQ from "../Pages/FAQ";
 
 
 const Route = createBrowserRouter([
@@ -57,6 +59,14 @@ const Route = createBrowserRouter([
             {
                 path: '/room-dettles/:id',
                 element: <PrivetRoute><RoomDettless></RoomDettless></PrivetRoute>
+            },
+            {
+                path: '/contactus',
+                element: <ContactUs></ContactUs>
+            },
+            {
+                path: '/faq',
+                element: <FAQ></FAQ>
             },
 
 

@@ -4,6 +4,11 @@ import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { toast } from "react-hot-toast";
 import ReactHelmet from "../../Components/ReactHelmet";
+import SignUpImg from '../../assets/Sign up-pana.png'
+
+
+
+
 
 const Register = () => {
 
@@ -65,7 +70,10 @@ const Register = () => {
 
 
     return (
-        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-center w-11/12 mx-auto mt-10">
+            <div>
+                <img src={SignUpImg} alt="" className="w-1/2" />
+            </div>
             <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
                 <h1 className="lg:text-4xl text-teal-500 text-center pt-4 text-2xl">Register now</h1>
                 <form
@@ -103,7 +111,7 @@ const Register = () => {
                 <div className="pl-6">I already have a acount <Link to={"/login"}><span className="text-red-500 underline">Log in</span></Link></div>
 
                 <div className="flex justify-center p-4 pb-7">
-                    <button onClick={googlesignIn} className="flex items-center border border-teal-500 rounded-full gap-3 py-3 px-5 bg-teal-200 hover:bg-teal-700"><FaGoogle /> Google Log In</button>
+                    <button onClick={googlesignIn} className="flex items-center border border-teal-500 rounded-xl gap-3 py-3 px-5 bg-teal-200 hover:bg-teal-700"><FaGoogle /> Google Log In</button>
                 </div>
 
             </div>
