@@ -36,7 +36,9 @@ const Navbar = () => {
                             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
                             <NavLink to={"/"}>Home</NavLink>
                             <NavLink to={"/rooms"}>Rooms</NavLink>
-                            <NavLink to={"/my-booking"}>My Bookings</NavLink>
+                            <NavLink to={'/contactus'}>Contact Us</NavLink>
+                            <NavLink to={'/faq'}>FAQ</NavLink>
+                            {user && <NavLink to={"/my-booking"}>My Bookings</NavLink>}
                             {user ? <button className="font-[450]" onClick={handelLogout}>Log Out</button> : <NavLink to={"/login"}><button className="font-[450]">Log In</button></NavLink>}
                         </ul>
                     </div>
@@ -48,7 +50,7 @@ const Navbar = () => {
                         <NavLink to={"/rooms"}>Rooms</NavLink>
                         <NavLink to={'/contactus'}>Contact Us</NavLink>
                         <NavLink to={'/faq'}>FAQ</NavLink>
-                        <NavLink to={"/my-booking"}>My Bookings</NavLink>
+                        {user && <NavLink to={"/my-booking"}>My Bookings</NavLink>}
                         {user ? <button className="font-[450]" onClick={handelLogout}>Log Out</button> : <NavLink to={"/login"}><button className="font-[450]">Log In</button></NavLink>}
 
                     </ul>
@@ -63,12 +65,14 @@ const Navbar = () => {
                                     src={user ? user?.photoURL : img} />
                             </div>
                         </div>
-                        <ul
-                            tabIndex={0}
-                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-4 shadow flex flex-col gap-3">
-                            <NavLink to={'/addroom'}><button>Add Room</button></NavLink>
-                            <NavLink to={'/myaddedrooms'}><button>My Added Rooms</button></NavLink>
-                        </ul>
+                        {
+                            user && <ul
+                                tabIndex={0}
+                                className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-4 shadow flex flex-col gap-3">
+                                {user && <NavLink to={'/addroom'}><button>Add Room</button></NavLink>}
+                                {user && <NavLink to={'/myaddedrooms'}><button>My Added Rooms</button></NavLink>}
+                            </ul>
+                        }
                     </div>
                 </div>
             </div>
