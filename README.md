@@ -1,3 +1,5 @@
+**A user-friendly platform for booking hotel rooms online with real-time availability, pricing, and instant booking confirmation.**
+
 ** Project name**
 
 Hotel Master
@@ -9,6 +11,16 @@ https://as-hotel-master.netlify.app/
 
 * Server Site
 https://hotel-master-server.vercel.app/
+
+
+**Main tecnolog**
+
+* react
+* VIT
+* react router dom
+* firebase
+* tailwind CSS
+* daisy ui
 
 **Purpose**
 
@@ -49,5 +61,13 @@ If any user wants to find a luxurious hotel room according to his choice, then h
 * Add room
 * My added rooms
 
+
+**Project install in local machine**
+
+npm install
+
+* run in localhost
+
+npm run dev
 
   
